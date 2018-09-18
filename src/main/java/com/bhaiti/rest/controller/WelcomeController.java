@@ -21,7 +21,7 @@ public class WelcomeController {
 
     @GetMapping("/welcome/user")
     @ResponseBody
-    public Welcome welcomeUser(@RequestParam(name="name", required=false, defaultValue="CI/CD integrations..") String name) {
+    public Welcome welcomeUser(@RequestParam(name="name", required=false, defaultValue="CI/CD integrations.. with codeDeploy") String name) {
         return new Welcome(String.format(welcomemsg, name));
     }
 
